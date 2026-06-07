@@ -55,12 +55,13 @@
 <body>
   <main>
     <h1>CraftRun Privacy Policy</h1>
-    <p class="updated">Last updated: 21 May 2026</p>
+    <p class="updated">Last updated: 7 June 2026</p>
 
     <p class="lead">CraftRun is an offline-first app for runners on film and TV sets. It helps you track drink and meal orders for your crew. This policy explains what happens to the information you put into the app. The short version: almost everything stays on your phone, and the few things that leave are described in full below.</p>
 
     <h2>Who is responsible for the data</h2>
     <p>CraftRun has no accounts and no login. There is no CraftRun server holding your data. The information you enter (crew names, dietary flags, drinks, orders, notes) is yours, and under UK GDPR you are the data controller for it. CraftRun is a tool you use to do your job, like a notebook.</p>
+    <p>For the small amount of processing CraftRun itself carries out (sending a catering menu to Google when you turn Cloud AI on, and crash reports if they are enabled), the data controller is Olexa Dunko, a sole trader based in the United Kingdom. You can get in touch at <a href="mailto:craftrun.privacy@icloud.com">craftrun.privacy@icloud.com</a>. You remain the data controller for the crew information you enter, as described above.</p>
 
     <h2>What stays on your device</h2>
     <p>By default, everything you enter stays on your phone and is never transmitted anywhere:</p>
@@ -77,6 +78,7 @@
     <h3>1. Cloud AI menu parsing (off by default, opt-in)</h3>
     <p>If you turn on Cloud AI parsing in Settings, the catering menu text or photo you paste is sent to our parsing service (a Cloudflare server, which forwards it to Google Gemini) so it can be read into a structured list. The request carries an anonymous device ID used only to prevent abuse of the free service. No account, no name.</p>
     <p>Your crew's names, orders, dietary flags, and notes are never sent during cloud parsing. Only the catering menu itself is sent. If you leave Cloud AI off, nothing is sent and parsing runs entirely on your device.</p>
+    <p>The menu you send is used only for that one parse. We keep no copy of it: it passes through our server to Google and is dropped straight away. Google does not use it to train their AI models, and holds the request only for a short time to check for misuse, as set out in <a href="https://ai.google.dev/gemini-api/terms">Google's Gemini API terms</a>.</p>
 
     <h3>2. Crash reports (if enabled in the released build)</h3>
     <p>If the app crashes, a crash report may be sent to our error-reporting provider (Sentry) so we can fix the problem. Personal data is stripped from these reports before they are sent. We do not use them to track you, and they are not linked to your identity.</p>
@@ -103,6 +105,10 @@
       <li><strong>Cloudflare and Google Gemini</strong>: only when you turn on Cloud AI parsing, and only for the menu text or photo you paste.</li>
       <li><strong>Sentry</strong>: only for crash reports, with personal data removed.</li>
     </ul>
+
+    <h2>Where your data goes</h2>
+    <p>When Cloud AI parsing is on, the menu text or photo is processed by Google on its own infrastructure, which may be outside the UK. Google's terms allow this data to be handled in any country where it keeps facilities. The transfer happens only for that one menu, only while you have the feature switched on, and relies on Google's own safeguards for moving data between countries. If you keep Cloud AI off, nothing is sent and no transfer takes place.</p>
+    <p>The same applies to crash reports, if they are enabled: they go to Sentry, whose servers may also be outside the UK, with the same reliance on the provider's safeguards. Personal data is removed before a crash report is sent.</p>
 
     <h2>Your rights</h2>
     <p>Because the data lives on your device and we hold no copy, you are in direct control of it. You can view, edit, or delete any of it inside the app at any time.</p>
